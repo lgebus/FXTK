@@ -11,9 +11,7 @@ import java.util.List;
 import javafx.beans.DefaultProperty;
 import javafx.beans.property.StringProperty;
 import javafx.css.CssMetaData;
-import javafx.css.ParsedValue;
 import javafx.css.SimpleStyleableObjectProperty;
-import javafx.css.StyleConverter;
 import javafx.css.Styleable;
 import javafx.css.StyleableProperty;
 import javafx.geometry.Pos;
@@ -21,7 +19,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import static javafx.scene.layout.StackPane.getAlignment;
-import javafx.scene.text.Font;
 
 /**
  *
@@ -143,23 +140,7 @@ public class Title extends StackPane {
             return ((Title) styleable).linePos;
         }
     };
-/*
-    private static class PosConverter extends StyleConverter<String, Pos> {
 
-        private static class Holder {
-            static PosConverter INSTANCE = new PosConverter();
-        }
-
-        public static StyleConverter<String, Pos> getInstance() {
-            return Holder.INSTANCE;
-        }
-
-        @Override
-        public Pos convert(ParsedValue<String, Pos> value, Font font) {
-            return Pos.valueOf(value.getValue());
-        }
-    }
-*/
     private final static List<CssMetaData<? extends Styleable, ?>> STYLEABLES;
 
     static {
