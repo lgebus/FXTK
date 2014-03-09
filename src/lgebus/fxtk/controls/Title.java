@@ -4,6 +4,7 @@
  */
 package lgebus.fxtk.controls;
 
+import com.sun.javafx.css.converters.EnumConverter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -120,7 +121,7 @@ public class Title extends StackPane {
         return STYLEABLES; 
     }
 
-    private static final CssMetaData<Title, Pos> TEXT_POS_META_DATA = new CssMetaData("-text-pos", PosConverter.getInstance()) {
+    private static final CssMetaData<Title, Pos> TEXT_POS_META_DATA = new CssMetaData("-text-pos", new EnumConverter<>(Pos.class)) {
         @Override
         public boolean isSettable(Styleable styleable) {
             return true;
@@ -131,7 +132,7 @@ public class Title extends StackPane {
             return ((Title) styleable).textPos;
         }
     };
-    private static final CssMetaData<Title, Pos> LINE_POS_META_DATA = new CssMetaData("-line-pos", PosConverter.getInstance()) {
+    private static final CssMetaData<Title, Pos> LINE_POS_META_DATA = new CssMetaData("-line-pos", new EnumConverter<>(Pos.class)) {
         @Override
         public boolean isSettable(Styleable styleable) {
             return true;
@@ -142,7 +143,7 @@ public class Title extends StackPane {
             return ((Title) styleable).linePos;
         }
     };
-
+/*
     private static class PosConverter extends StyleConverter<String, Pos> {
 
         private static class Holder {
@@ -158,7 +159,7 @@ public class Title extends StackPane {
             return Pos.valueOf(value.getValue());
         }
     }
-
+*/
     private final static List<CssMetaData<? extends Styleable, ?>> STYLEABLES;
 
     static {
