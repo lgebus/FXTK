@@ -1,0 +1,16 @@
+.button-text-field .action-button  {
+    -fx-background-color: derive(-fx-color, -25.4%), -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 1, 2, 3;
+    -fx-background-radius: 0 3 3 0 , 0 2 2 0, 0 2 2 0;
+    -fx-padding: -2 10 -2 10; 
+}
+.button-text-field .action-button:hover  {
+    -fx-background-color: derive(-fx-color, -25.4%), -fx-inner-border, derive(-fx-color, 10%);
+    -fx-background-insets: 1, 2, 3;
+    -fx-background-radius: 0 3 3 0 , 0 2 2 0, 0 2 2 0;
+    -fx-padding: -2 10 -2 10; 
+}
+
+.button-text-field:right-node-visible {
+    -fx-padding: 0.333333em 0 0.333333em 0.583em;
+}
