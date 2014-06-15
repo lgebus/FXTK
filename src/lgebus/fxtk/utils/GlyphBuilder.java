@@ -43,9 +43,9 @@ public class GlyphBuilder extends TreeMap<String, Object> implements Builder<Nod
     public Node build() {
         Glyph res = (Glyph)GlyphFontRegistry.glyph(name);
         if( size > -1.0) {
-            res.setSize(size);
+            res.size(size);
         }
-        res.setColor( color);
+        res.color( color);
         return res;
     }
 
